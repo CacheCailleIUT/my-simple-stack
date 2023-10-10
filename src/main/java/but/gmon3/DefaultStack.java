@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 /**
- * Implémentation de SimpleStack.
+ * Implémentation de SimpleStack, vraiment basique.
  */
 public class DefaultStack implements SimpleStack {
 
-    /**
-     * Liste d'items.
-     */
+   /**
+    * Liste d'items (stack).
+    */
     private final ArrayList<Item> listItem = new ArrayList<>();
 
     /**
@@ -57,7 +57,7 @@ public class DefaultStack implements SimpleStack {
 
     /**
      * Removes the object at the top of this stack and returns that object as
-     * the value of this function.
+     * the value of this function (EasterEggs).
      *
      * @return L'objet qui a été enlevé.
      * @throws EmptyStackException if this stack is empty.
