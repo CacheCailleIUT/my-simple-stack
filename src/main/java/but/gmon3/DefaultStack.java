@@ -35,7 +35,7 @@ public class DefaultStack implements SimpleStack {
 
     /**
      * Pushes an item onto the top of this stack.
-     * null item is allowed.
+     * null item is allowed by Me.
      *
      * @param item Un item que l'on push.
      */
