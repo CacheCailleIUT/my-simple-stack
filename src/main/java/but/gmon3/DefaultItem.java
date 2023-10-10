@@ -5,4 +5,9 @@ package but.gmon3;
  */
 public class DefaultItem implements Item {
 	// TODO Finir la classe
+
+	/**
+	 * Nom de l'item.
+	 */
+
 }
