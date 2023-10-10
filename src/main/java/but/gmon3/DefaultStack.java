@@ -20,7 +20,7 @@ public class DefaultStack implements SimpleStack {
      */
     @Override
     public boolean isEmpty() {
-        return this.listItem.size() == 0;
+        return listItem.size() == 0;
     }
 
     /**
@@ -30,7 +30,7 @@ public class DefaultStack implements SimpleStack {
      */
     @Override
     public int getSize() {
-        return this.listItem.size();
+        return listItem.size();
     }
 
     /**
@@ -41,7 +41,7 @@ public class DefaultStack implements SimpleStack {
      */
     @Override
     public void push(final Item item) {
-        this.listItem.add(item);
+        listItem.add(item);
     }
 
     /**
@@ -52,18 +52,21 @@ public class DefaultStack implements SimpleStack {
      */
     @Override
     public Item peek() throws EmptyStackException {
-        return null;
+        return listItem.get(listItem.size()-1);
     }
 
     /**
      * Removes the object at the top of this stack and returns that object as
      * the value of this function.
      *
-     * @return Enlève le dernier item de la stack.
+     * @return L'objet qui a été enlevé.
      * @throws EmptyStackException if this stack is empty.
      */
     @Override
     public Item pop() throws EmptyStackException {
-        return null;
+        int index = listItem.size()-1;
+        Item item = listItem.get(index);
+        listItem.remove(getSize()-1);
+        return item;
     }
 }

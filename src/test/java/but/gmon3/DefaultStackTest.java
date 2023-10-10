@@ -45,14 +45,30 @@ class DefaultStackTest {
         // Then the size of the stack is 1 and the stack is not empty
         assertEquals(1, ss.getSize());
         assertFalse(ss.isEmpty());
-
     }
 
     @Test
     void peek() {
+        // Given a stack with 1 item
+        SimpleStack ss = new DefaultStack();
+        Item item = new DefaultItem();
+        ss.push(item);
+        // When you peek the stack
+        // Then the last item pushed is returned
+        assertEquals(item, ss.peek());
     }
 
     @Test
     void pop() {
+        // Given a stack with 1 item
+        SimpleStack ss = new DefaultStack();
+        Item item = new DefaultItem();
+        ss.push(item);
+        // When you pop the stack
+        ss.pop();
+        // Then the stack is empty
+        assertNull(ss.peek());
+        assertEquals(0, ss.getSize());
+        assertTrue(ss.isEmpty());
     }
 }
